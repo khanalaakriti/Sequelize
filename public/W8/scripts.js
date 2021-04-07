@@ -24,6 +24,7 @@ async function populateRestaurants() {
 window.onload= populateRestaurants();
 
 
+
     //     appendItem.classList.add('black');
     //     appendItem.classList.add('boldText');
        
