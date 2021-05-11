@@ -1,4 +1,4 @@
-function getRandomIntInclusive(min, max) {
+function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -6,9 +6,9 @@ function getRandomIntInclusive(min, max) {
 
 async function getMeals(){
   console.log('data request');
-  const diningRequest = await fetch('/api/wholeMeal');
-  const diningData = await diningRequest.json();
-  return diningData;
+  const Requestdining = await fetch('/api/wholeMeal');
+  const Datadining = await Requestdining.json();
+  return Datadining;
 }
 
 async function windowActions(){
@@ -18,7 +18,7 @@ async function windowActions(){
 
   const mealArray = [1,2,3,4,5,6,7,8,9,10];
   const selectedMeals = mealArray.map((element) => {
-      const random = getRandomIntInclusive(0, meals.length -1);
+      const random = getRandomInt(0, meals.length -1);
       return meals[random];
   });
   console.table(selectedMeals);
